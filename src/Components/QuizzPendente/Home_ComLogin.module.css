@@ -1,0 +1,358 @@
+.image_container {
+    position: relative;
+    /* Torna o contêiner o elemento de referência */
+    width: 300px;
+    /* Largura do contêiner */
+    height: 200px;
+    /* Altura do contêiner */
+}
+
+.background_img {
+    width: 100%;
+    /* Ajusta a imagem ao contêiner */
+    height: 100%;
+}
+
+.overlay_img {
+    position: absolute;
+    /* Permite sobrepor a imagem */
+    top: 220px;
+    /* Centraliza verticalmente */
+    left: 50%;
+    /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta o ponto de origem para o centro */
+    width: 270px;
+    /* Tamanho da imagem sobreposta */
+    height: auto;
+    /* Mantém a proporção */
+}
+
+.titulo {
+    font-family: 'Kite one';
+    color: #E1383B;
+    font-weight: bold;
+
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30pt;
+    height: auto;
+}
+
+.box {
+    padding: 35px;
+    width: 700px;
+    height: 300px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.342);
+
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30pt;
+    height: auto;
+}
+
+.boxh2 {
+    font-family: 'Montserrat';
+    font-size: 22pt;
+    color: rgba(0, 0, 0, 0.699);
+}
+
+.boxp {
+    font-family: 'Montserrat';
+    font-size: 14pt;
+    color: rgba(0, 0, 0, 0.699);
+}
+
+.boxp>span {
+    color: #E1383B;
+}
+
+
+.menu {
+
+    padding-top: 30px;
+    display: flex;
+    gap: 20px;
+    font-family: 'Montserrat';
+    font-size: 25px;
+}
+
+.boxpesquisa {
+    display: flex;
+    padding-top: 25px;
+    justify-content: space-between;
+}
+
+.pesquisa {
+    font-family: 'Montserrat';
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.315);
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-width: 0;
+    height: 50px;
+    width: 10%;
+    font-size: 16pt;
+}
+
+.boxbtn {
+    cursor: pointer;
+    outline: none;
+    font-family: 'Montserrat';
+    background-color: #E1383B;
+    border: solid 1px #E1383B;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left-width: 0;
+    color: white;
+    font-size: 16pt;
+}
+
+.boxbtn:hover {
+    background-color: #c5282a;
+}
+
+.marcas {
+    font-family: 'Montserrat';
+    font-size: 18pt;
+    padding: 15px;
+    color: rgba(0, 0, 0, 0.808);
+    margin-top: 50px;
+    background-color: white;
+}
+
+.carrosel {
+    margin-top: 30px;
+
+    width: 100%;
+    height: 400px;
+}
+
+.cardarea {
+    font-family: 'Montserrat';
+    padding: 40px;
+    background-color: #c5282a;
+    background-image: url('./images/Home_Logim/flag.png');
+    height: 410px;
+}
+
+.cardarea>h1 {
+    color: white;
+}
+
+.cards {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    justify-content: space-between;
+}
+
+.faixabranca {
+    width: 100%;
+    height: 150px;
+}
+
+
+.Finalh1 {
+    font-family: 'Montserrat';
+    text-align: center;
+    margin: 10px;
+}
+
+.FinalSection {
+    background-color: #F4F4F4;
+    height: 500px;
+    padding: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.CardCarPrices {
+    border-radius: 5px;
+    display: block;
+    padding: 10px;
+    background-color: #E1383B;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.CardCarPrices>p {
+    font-family: 'Montserrat';
+    padding: 5px;
+    color: white;
+    font-size: 22pt;
+}
+
+.CardCarPrices>img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    /* ou 'contain' dependendo do efeito desejado */
+    border-radius: 0 0 5px 5px;
+    /* opcional: para combinar com os cantos da div */
+}
+
+.SpaceQuiz {
+    margin-top: 120px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.SpaceQuiz>h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.division {
+    display: flex;
+    justify-content: space-around;
+}
+
+.division>div {
+    width: 42vw;
+}
+
+.Text {
+    text-align: center;
+}
+
+.Text>p>span {
+    color: #c2171a;
+}
+
+.Text>p {
+    font-size: 20pt;
+    margin-bottom: 50px;
+}
+
+.buttonParaQuizz {
+    background-color: #c5282a;
+    color: white;
+    width: 300px;
+    height: 50px;
+    border-radius: 9px;
+    border: 1px solid;
+    font-size: 15pt;
+}
+
+.buttonParaQuizz:hover {
+    background-color: #c2171a;
+    cursor: pointer;
+}
+
+.imgQuiz {
+    height: 400px;
+}
+
+.noAds {
+    padding: 10px;
+    background-color: white;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+.quizzCardsSection {
+    height: 50vh;
+    margin-top: 110px;
+    padding: 10px;
+}
+
+.quizzCardsTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quizzCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.changeQuizz {
+    font-size: 20px;
+    color: #c2171a;
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+.changeQuizz:hover {
+    color: #68040596;
+}
+
+.cardQuizz {
+    margin-top: 20px;
+    width: 17%;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: solid 1px rgba(128, 128, 128, 0.253);
+    border-radius: 10px;
+
+    & h1 {
+        font-size: 20px;
+    }
+
+    & button {
+        width: 70%;
+        padding: 10px;
+        border: none;
+        background-color: #81CA73;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    & button:hover {
+        background-color: #3cb324;
+    }
+}
+
+.quizzAttribute {
+    color: rgba(0, 0, 0, 0.459);
+}
+
+.quizzNoResults {
+    font-size: 22px;
+    margin-top: 120px;
+}
+
+
+.buttonResultadoQuizz {
+    margin-top: 20px;
+    width: 25%;
+    padding: 10px;
+    border: none;
+    background-color: #81CA73;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+& .buttonResultadoQuizz:hover {
+    background-color: #3cb324;
+}
