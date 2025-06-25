@@ -1,0 +1,244 @@
+.BackToListDetalhes {
+    padding: 10px;
+    cursor: pointer;
+    width: 100px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 12pt;
+}
+
+.BackToListDetalhes:hover {
+    color: rgb(247, 18, 18);
+}
+
+.HeaderBoxDetalhes {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.HeaderCarroselInfoDetalhes {
+    width: 60vw;
+}
+
+.HeaderInfoDetalhes {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.HeaderInfoDetalhes>p {
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.HeaderInfoDetalhes>h2 {
+    font-family: 'Montserrat';
+}
+
+.HeaderLeftDetalhes {
+    width: 25%;
+    padding-right: 10px;
+}
+
+.HeaderInfoVendedorDetalhes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-family: 'Montserrat';
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.459);
+    font-size: 14pt;
+}
+
+.HeaderInfoVendedorDetalhes>h2 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.HeaderInfoVendedorDetalhes>span {
+    text-decoration: underline;
+}
+
+.HeaderInfoVendedorDetalhesP {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.671);
+}
+
+.HeaderInfoVendedorDetalhesLocation {
+    padding-top: 15px;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.459);
+    text-align: center;
+}
+
+.HeaderContactVendedorDetalhes {
+    margin-top: 20px;
+    padding: 15px;
+    font-family: 'Montserrat';
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.459);
+    text-align: center;
+    font-size: 14pt;
+}
+
+.HeaderContactVendedorDetalhes>p {
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.HeaderContactVendedorDetalhesNegrito {
+    font-weight: 600;
+}
+
+.HeaderPriceVendedorDetalhes {
+    margin-top: 20px;
+    padding: 15px;
+    font-family: 'Montserrat';
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.712);
+    text-align: center;
+    font-size: 17pt;
+}
+
+.HeaderBuyVendedorDetalhes {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    color: white;
+    text-align: center;
+    font-size: 17pt;
+    background-color: #A80F12;
+    cursor: pointer;
+}
+
+.BottomSectionDetalhes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.MidInfoAdDetalhes {
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: 10%;
+    width: 40%;
+}
+
+.NameAnuncioDetalhes {
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    font-size: 15pt;
+}
+
+.DetailsOutsideDetalhes {
+    border-bottom: 1px solid black;
+}
+
+.DetailsAnuncioDetalhes {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.DetailsInsideDetalhes {
+    display: flex;
+}
+
+.DetailsInsideDetalhes>div {
+    padding: 25px;
+    font-size: 16pt;
+}
+
+.DetailsInsidePDetalhes {
+    font-weight: 300;
+}
+
+.DetailsInsideUnder {
+    text-decoration: underline rgba(0, 0, 0, 0.452);
+}
+
+.MidCardDetalhes {
+    padding: 20px;
+    margin-top: 30px;
+    width: 30%;
+    background-color: #ebeaea;
+    border-radius: 5px;
+}
+
+.MidCardDetalhes>h1 {
+    font-size: 18pt;
+    padding-bottom: 10px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.favoriteIcon {
+    color: #A80F12;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.favoriteIcon:hover {
+    transform: scale(1.1);
+}
+
+.favoritedIcon {
+    color: #A80F12;
+    fill: #A80F12;
+    cursor: pointer;
+    animation: pulse 0.3s ease;
+}
+
+.favoritedIcon:hover {
+    transform: scale(1.1);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #a71e2c;
+    background-color: #ccc;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ownerInfo {
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    & p {
+        font-size: 26px;
+    }
+}
+

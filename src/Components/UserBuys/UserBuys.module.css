@@ -1,0 +1,200 @@
+/* src/Components/ListaDeDesejos/ListaDeDesejos.module.css */
+
+.adlistSection {
+  margin-top: -30px;
+}
+
+.adlistSection h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.adlistDescription {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.adlistGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.adlistItemCard {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.adlistItemCard:hover{
+  transform: translateY(-5px);
+}
+
+.itemImageContainer {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.itemImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heartIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: red;
+  cursor: pointer;
+}
+
+.itemName {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 0 10px;
+}
+
+.itemPrice {
+  font-size: 16px;
+  font-weight: bold;
+  color: #a71e2c;
+  margin-bottom: 10px;
+}
+
+.itemDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 15px;
+  padding: 0 10px;
+
+  & span {
+    font-weight: 600;
+  }
+}
+
+.itemDetails span:first-child {
+  margin-right: 5px;
+}
+
+.buyButton {
+  background-color: #a71e2c;
+  color: white;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: calc(100% - 30px);
+  max-width: 150px;
+}
+
+.buyButton:hover {
+  background-color: #8c1a26;
+}
+
+@media (max-width: 768px) {
+  .adlistGrid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .adlistGrid {
+    grid-template-columns: 1fr;
+  }
+  .adlistItemCard {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.favoriteIcon {
+  color: #A80F12;
+  fill: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.favoriteIcon:hover {
+  transform: scale(1.1);
+}
+
+.favoritedIcon {
+  color: #A80F12;
+  fill: #A80F12;
+  cursor: pointer;
+  animation: pulse 0.3s ease;
+}
+
+.favoritedIcon:hover {
+  transform: scale(1.1);
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeletonWrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  /* border: solid 1px #8080804d; */
+  border-radius: 10px;
+}
+
+.skeletonLoader {
+  width: 100%;
+  height: 259px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f8f8f8 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}

@@ -1,0 +1,67 @@
+.AllResultadoQuizz {
+    padding: 20px;
+}
+
+.FirstH1ResultadoQuizz {
+    font-weight: 300;
+    font-size: 18pt;
+    color: rgba(0, 0, 0, 0.651);
+    font-family: 'Montserrat';
+}
+
+.FirstSpanResultadoQuizz {
+    color: black;
+}
+
+.ResultOfResultadoQuizz {
+    padding-top: 40px;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+    margin: 0 auto;
+}
+
+.CardResultadoQuizz {
+    width: 19%;
+    min-width: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    padding: 20px;
+    font-family: 'Montserrat';
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.NameCardResultadoQuizz {
+    font-size: 15pt;
+    text-align: center;
+    padding-bottom: 30px;
+    font-weight: 500;
+}
+
+.TittleCardResultadoQuizz {
+    font-size: 14pt;
+    color: rgba(0, 0, 0, 0.562);
+}
+
+.InfoCardResultadoQuizz {
+    font-size: 14pt;
+    padding-bottom: 25px;
+}
+
+.BtnCardResultadoQuizz {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #81CA73;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 14pt;
+}
+
+.BtnCardResultadoQuizz:hover {
+    background-color: #60aa51;
+}

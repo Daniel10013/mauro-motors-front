@@ -1,0 +1,60 @@
+/* Estilos para o card */
+.card-item {
+    width: 250px; /* Largura do card */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Imagem do Produto */
+  .card-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Nome e Descrição */
+  .card-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .card-item p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  /* Preço */
+  .card-item .preco {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Botão de Coração */
+  .coracao {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #ff0000;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .coracao:hover {
+    transform: scale(1.2);
+  }  

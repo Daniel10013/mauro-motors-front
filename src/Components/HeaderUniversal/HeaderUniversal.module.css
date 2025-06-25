@@ -1,0 +1,63 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.left {
+  display: flex;
+  gap: 1rem;
+  height: 50px;
+  padding-bottom: -20px;
+}
+
+header {
+  padding-top: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #a80f1246;
+  box-shadow: 2px 4px 2px #a80f1234;
+  margin-bottom: 30px;
+}
+
+.h1 {
+  font-family: "Kite one";
+  font-weight: lighter;
+  font-size: 25pt;
+  color: #a80f12;
+}
+
+.Links {
+  display: flex;
+  gap: 4rem;
+  font-size: 15pt;
+  font-family: "Kite one";
+  padding-top: 20px;
+}
+
+.Links > a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.527);
+}
+
+.Links > a:hover {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.Links .first {
+  color: #a80f12;
+}
+
+.icon > img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.space {
+  width: 250px;
+  text-align: right;
+  padding-bottom: -20px;
+}

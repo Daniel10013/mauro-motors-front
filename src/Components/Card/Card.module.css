@@ -1,0 +1,55 @@
+.card{
+    cursor: pointer;
+    padding: 5px;
+    width: 100%;
+    height: 130px;
+    border: 1px solid rgba(0, 0, 0, 0.336);
+    border-radius: 5px;
+    display: flex;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+img{
+    width: 45%;
+    border-radius: 5px;
+}
+
+.info {
+    font-family: 'Montserrat';
+    padding-left: 10px;
+
+}
+
+.name {
+    color: rgba(0, 0, 0, 0.808);
+}
+
+.price {
+    font-size: 18pt;
+}
+
+.km {
+    display: flex;
+    align-items: center;
+    color: rgba(49, 48, 48, 0.678);
+    font-size: 12pt;
+
+    & p{
+        margin-top: 3px;
+    }
+}
+
+.info2 {
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+    font-family: 'Montserrat';
+    display: flex;
+    color: gray;
+    align-items: center;
+
+    & p{
+        margin-top: 3px;
+    }
+}

@@ -1,0 +1,399 @@
+.container {
+  display: flex;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.header {
+  padding-top: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h1 {
+  font-family: "Kite one";
+  font-weight: lighter;
+  font-size: 22pt;
+  color: #a80f12;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #a71e2c;
+}
+
+.nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #a71e2c;
+}
+
+.userIcon {
+  font-size: 28px;
+  color: #555;
+}
+
+.mainContent {
+  padding: 30px 40px;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: solid 1px rgba(128, 128, 128, 0.26);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.profileSummary {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.avatarSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #a71e2c;
+  background-color: #ccc;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dataCard {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1;
+  min-width: 380px;
+  box-sizing: border-box;
+}
+
+.dataCard h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.cardRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.cardItem {
+  flex: 1;
+  min-width: calc(50% - 10px);
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.cardItem:nth-child(even) {
+  padding-right: 0;
+}
+
+.cardItem .label {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.cardItem .value {
+  color: #555;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+.addressCard .cardItem .label {
+  color: #a71e2c;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 0;
+  margin-top: 25px;
+}
+
+.deleteAccountButton {
+  background-color: #e06b6b;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.3s ease;
+}
+
+.deleteAccountButton:hover {
+  background-color: #cc5a5a;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.tabButton {
+  background-color: transparent;
+  border: none;
+  padding: 12px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #555;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tabButton:hover {
+  color: #a71e2c;
+}
+
+.tabButton.activeTab {
+  color: #a71e2c;
+  border-bottom-color: #a71e2c;
+  font-weight: bold;
+}
+
+.editProfileSection,
+.additionalInfoSection {
+  margin-bottom: 40px;
+}
+
+.editProfileSection h2,
+.additionalPhones h2,
+.addresses h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 30px;
+  margin-bottom: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.formGroup input {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #a71e2c;
+  box-shadow: 0 0 0 2px rgba(167, 30, 44, 0.2);
+}
+
+.actionButton {
+  background-color: #28a745;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: fit-content;
+}
+
+.actionButton:hover {
+  background-color: #218838;
+}
+
+.additionalPhones {
+  margin-bottom: 40px;
+}
+
+.additionalPhones .formGroup {
+  max-width: 300px;
+  margin-bottom: 15px;
+}
+
+.addButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #218838;
+}
+
+.saveButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.saveButton:hover {
+  background-color: #218838;
+}
+
+.addresses .formGrid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 992px) {
+  .profileSummary {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dataCard {
+    width: 90%;
+    min-width: unset;
+  }
+
+  .avatarSection {
+    margin-bottom: 20px;
+  }
+  .tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tabButton {
+    margin-bottom: 5px;
+  }
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Aquelas crocancia responsiva */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+  .nav {
+    margin-top: 15px;
+  }
+  .nav a {
+    margin: 0 10px;
+  }
+  .mainContent {
+    padding: 20px;
+  }
+  .profileSummary {
+    gap: 20px;
+  }
+  .cardRow {
+    flex-direction: column;
+  }
+  .cardItem {
+    min-width: 100%;
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .dataCard {
+    padding: 15px;
+  }
+  .dataCard h3 {
+    font-size: 16px;
+  }
+  .cardItem .label,
+  .cardItem .value {
+    font-size: 13px;
+  }
+  .deleteAccountButton {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+input:disabled {
+  background-color: rgba(128, 128, 128, 0.068);
+}
+
+.changePhoto{
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #a71e2c;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.changePhoto:hover {
+  color: #443032;
+}

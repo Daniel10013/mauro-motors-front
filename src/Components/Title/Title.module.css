@@ -1,0 +1,51 @@
+.title{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 70px 0 30px;
+}
+.title h2{
+    font-size:  32px;
+    color: #000f00;
+    margin-top: 5px;
+    text-transform: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body{
+    background: #F5f5f5;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    line-height: 1;
+    cursor: pointer;
+}
+.container{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.btn{
+    background: #333;
+    color: #fff;
+    padding: 14px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center ;
+}
+
+.btn img{
+    width: 20px;
+    margin-left: 10px;
+}

@@ -1,0 +1,292 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+
+:root {
+    --linear-grad: linear-gradient(to right, #B20000, #A80F12);
+    --grad-clr1: #B20000;
+    --grad-clr2: #A80F12;
+}
+
+.bodyLogin {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.contentLogin
+{
+    scale: 1.3;
+    border: solid 1px rgba(128, 128, 128, 0.199);
+    position: relative;
+    width: 850px;
+    height: 650px;
+    background-color: #FFF;
+    box-shadow: 25px 30px 55px #5557;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.form-content
+{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    padding: 0px 40px;
+    transition:  all 0.6s ease-in-out;
+}
+
+.sign-up-content
+{
+    opacity: 0;
+    z-index: 1;
+}
+
+.sign-in-content
+{
+    z-index: 2;
+}
+
+.formLogin{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 50px;
+}
+.h1Login{
+ 
+    color: var(--grad-clr1);
+    
+}
+.social-content
+{
+    margin:20px 0px;
+}
+
+.social-content
+ a{
+    border: 1px solid #DDD;
+    border-radius: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.spanLogin{
+    font-size: 12px;
+}
+.infield{
+    position: relative;
+    margin: 8px 0px;
+    width: 100%;
+}
+
+.inputLogin{
+    width: 100%;
+    padding: 12px 8px;
+    background-color: #f3f3f3;
+    border: none;
+    outline: none;
+}
+
+
+a.forgot{
+    padding-bottom: 3px;
+    border-bottom: 2px solid #EEE;
+    text-decoration: none;
+    color: inherit;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.buttonLogin{
+    border-radius: 20px;
+    border: 1 px solid var(--grad-clr1);
+    background: var(--grad-clr2);
+    color: #FFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: uppercase;
+    cursor: pointer;
+}
+.form-content
+ button{
+    margin-top: 17px;
+    transition: 80ms ease-in;
+}
+.form-content
+ button:hover{
+    background: #FFF;
+    color:  var(--grad-clr1);
+}
+
+.overlay-content
+{
+    position:absolute;
+    top: 0;
+    left: 60%;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 9;
+    
+}
+
+#overlayBtn{
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 304px;
+    transform: translateX(-50%);
+    width: 143.67px;
+    height: 40px;
+    border: 1px solid #FFF;
+    background: transparent;
+    border-radius: 20px;
+    
+}
+
+.overlay{
+    position: relative;
+    background-image: url(loginbackground.png);
+    background-size: 100%;
+    color: #FFF;
+    left: -150%;
+    height: 100%;
+    width: 250%;
+    transition: transform 0.6s ease-in-out;
+}
+.overlay-panel{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:  0px 40px;
+    text-align: center;
+    height: 100%;
+    width: 340px;
+    transition: 0.6s ease-in-out;
+}
+.overlay-left{
+    right: 60%;
+    transform: translate(-12%);
+}
+
+.overlay-right{
+    right: 0;
+    transform: translate(0%);
+}
+
+.overlay-panel h1{
+    color: #FFF;
+}
+.overlay-right p{
+    margin:0px 0px 15px;
+   
+}
+
+.pLogin{
+   font-size: px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin:25px 0px 35px;
+}
+
+
+.overlay-panel button{
+    border: none;
+    background-color: transparent;
+}
+.right-panel-active .overlay-content
+{
+    transform: translate(-150%);
+
+}
+.right-panel-active .overlay{
+    transform: translateX(50%);
+}
+.right-panel-active .overlay-left{
+    transform: translateX(25%);
+}
+.right-panel-active .overlay-right{
+    transform: translateX(35%);
+}
+
+.right-panel-active .sign-in-content
+{
+ transform: translateX(20%);
+ opacity: 0;
+}
+.right-panel-active .sign-up-content
+{
+    transform: translateX(66.7%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+   }
+   @keyframes show{
+    0%, 50%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50.1%, 100%{
+        opacity: 0;
+        z-index: 1;
+    }
+   }
+
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.btn{
+    background: #333;
+    color: #fff;
+    padding: 14px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center ;
+}
+
+.btn img{
+    width: 20px;
+    margin-left: 10px;
+}
+
+.loader {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 0.6s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

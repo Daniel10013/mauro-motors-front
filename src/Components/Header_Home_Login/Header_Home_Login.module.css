@@ -1,0 +1,103 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    padding-left: 10px;
+    height: 70px;
+    padding-right: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.h1 {
+    font-family: 'Kite one';
+    font-weight: lighter;
+    font-size: 22pt;
+    color: #A80F12;
+}
+
+.search_box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    overflow: hidden; 
+    width: 300px; 
+  }
+  
+  .search_input {
+    flex: 1; 
+    border: none;
+    padding: 10px;
+    outline: none; 
+  }
+  
+  .search_button {
+    background-color: #d9534f; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search_button:hover {
+    background-color: #c9302c; 
+  }
+
+.Links {
+    display: flex;
+    gap: 3rem;
+    font-size: 15pt;
+    font-family: 'Kite one';
+}
+
+.Links > a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.527);
+    transition: 0.2s;
+}
+
+.Links > a:hover{
+    text-decoration: none;
+    transition: 0.2s;
+    color: rgba(0, 0, 0, 0.863);
+}
+
+.Links .first {
+    color: #A80F12;
+}
+
+.userSection{
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logoutIcon {
+    width: 30px;
+    height: 30px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.logoutIcon:hover {
+    color: rgba(0, 0, 0, 0.582);
+}
+
+.linkcurrent[aria-current="page"] {
+  font-weight: bold;
+  color: #A80F12;
+}
+
+.icon {
+  color: gray;
+}
+
+a[aria-current="page"] .icon {
+  color: #A80F12;
+}
