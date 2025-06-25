@@ -1,4 +1,4 @@
-import styles from './Home_ComLogin/Home_ComLogin.module.css'
+import styles from './Home_ComLogin.module.css'
 import quizzQuestion from '../../Pages/Home_ComLoginSemQuiz/images/quizzQuestion.png'
 import { Link } from 'react-router-dom';
 
