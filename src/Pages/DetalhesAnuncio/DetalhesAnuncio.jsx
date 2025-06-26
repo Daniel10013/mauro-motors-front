@@ -75,10 +75,10 @@ function DetalhesAnuncio() {
     }
 
     const getUser = (userId) => {
-        console.log(userId);
-        console.log(apiUrl + "user/" + userId);
-        axios.get(apiUrl + "user/" + userId, { headers })
+        const url = apiUrl + "user/" + userId;
+        axios.get(url, { headers })
             .then((res) => {
+                console.log(url);
                 if (res.data.status == "success") {
                     console.log(res.data.data[0]);
                     setAdOwner(res.data.data[0])
