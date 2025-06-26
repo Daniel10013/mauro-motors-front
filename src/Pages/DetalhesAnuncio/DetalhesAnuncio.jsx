@@ -34,7 +34,6 @@ function DetalhesAnuncio() {
         try {
             await Promise.all([
                 getAdData(),
-                getUser(),
                 increaseViews(),
                 getFavoritedOnLoad()
             ]);
@@ -60,7 +59,7 @@ function DetalhesAnuncio() {
             .then((res) => {
                 if (res.data.status == "success") {
                     setAdData(res.data.data[0]);
-                    getUser(res.data.data[0].user_id);
+                    return getUser(res.data.data[0].user_id);
                 }
             })
             .catch((res) => {
