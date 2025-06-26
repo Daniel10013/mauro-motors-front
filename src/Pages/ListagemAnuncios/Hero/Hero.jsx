@@ -100,7 +100,7 @@ const ListagemAnuncios = () => {
     } finally {
       setTimeout(() => {
         setIsLoading(false);
-      }, 500);
+      }, 1200);
     }
   }
 
