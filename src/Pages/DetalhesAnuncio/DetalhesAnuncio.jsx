@@ -59,7 +59,6 @@ function DetalhesAnuncio() {
             .then((res) => {
                 if (res.data.status == "success") {
                     setAdData(res.data.data[0]);
-                    console.log(res.data.data[0]);
                     return getUser(res.data.data[0].user_id);
                 }
             })
@@ -75,11 +74,9 @@ function DetalhesAnuncio() {
     }
 
     const getUser = (userId) => {
-        axios.get(apiUrl + "user/" + adData.user_id, { headers })
+        axios.get(apiUrl + "user/" + userId, { headers })
             .then((res) => {
-                console.log(adData.user_id);
                 if (res.data.status == "success") {
-                    console.log(res.data.data[0]);
                     setAdOwner(res.data.data[0])
                     return getUserAddress()
                 }
