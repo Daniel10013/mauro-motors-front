@@ -33,7 +33,7 @@ const AnunciosUsuario = () => {
     } finally {
       setTimeout(() => {
         setIsLoading(false);
-      }, 500);
+      }, 1000);
     }
   }
 

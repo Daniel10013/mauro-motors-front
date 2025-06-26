@@ -80,7 +80,7 @@ const Avaliacao = () => {
     } finally {
       setTimeout(() => {
         setIsLoading(false);
-      }, 500);
+      }, 1200);
     }
   }
 

@@ -32,7 +32,7 @@ const ComprasUsuario = () => {
     } finally {
       setTimeout(() => {
         setIsLoading(false);
-      }, 500);
+      }, 1000);
     }
   }
 
