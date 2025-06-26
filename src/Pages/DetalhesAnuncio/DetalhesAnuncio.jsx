@@ -75,10 +75,9 @@ function DetalhesAnuncio() {
     }
 
     const getUser = (userId) => {
-        const url = apiUrl + "user/" + userId;
-        axios.get(url, { headers })
+        axios.get(apiUrl + "user/" + adData.user_id, { headers })
             .then((res) => {
-                console.log(url);
+                console.log(adData.user_id);
                 if (res.data.status == "success") {
                     console.log(res.data.data[0]);
                     setAdOwner(res.data.data[0])
