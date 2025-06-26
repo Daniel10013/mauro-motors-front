@@ -75,6 +75,8 @@ function DetalhesAnuncio() {
     }
 
     const getUser = (userId) => {
+        console.log(userId);
+        console.log(apiUrl + "user/" + userId);
         axios.get(apiUrl + "user/" + userId, { headers })
             .then((res) => {
                 if (res.data.status == "success") {
