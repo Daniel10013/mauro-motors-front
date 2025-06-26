@@ -59,6 +59,7 @@ function DetalhesAnuncio() {
             .then((res) => {
                 if (res.data.status == "success") {
                     setAdData(res.data.data[0]);
+                    console.log(res.data.data[0]);
                     return getUser(res.data.data[0].user_id);
                 }
             })
