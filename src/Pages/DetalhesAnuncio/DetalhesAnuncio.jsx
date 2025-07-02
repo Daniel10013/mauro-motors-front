@@ -17,13 +17,13 @@ function DetalhesAnuncio() {
 
     const navigate = useNavigate();
 
-    const [loading, setLoading] = useState(true);
+    // const [loading, setLoading] = useState(true);
     const [adData, setAdData] = useState({});
     const [adOwner, setAdOwner] = useState({});
     const [ownerAddress, setOwnerAddress] = useState({});
     const [isFavorite, setIsFavorite] = useState(false);
     const [favoriteId, setFavoriteId] = useState(false);
-    const [isLoadingUser, setIsLoadingUser] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
 
     const { id } = useParams();
 
@@ -40,7 +40,7 @@ function DetalhesAnuncio() {
             ]);
         } finally {
             setTimeout(() => {
-                setLoading(false);
+                setIsLoading(false);
             }, 800);
         }
     };
@@ -253,7 +253,7 @@ function DetalhesAnuncio() {
     const back = () => {
         history.back();
     };
-    if (loading) return <Loader />;
+    // if (loading) return <Loader />;
     return (
         <div>
             <Header_Home_Login />
@@ -287,7 +287,7 @@ function DetalhesAnuncio() {
                             <h2>Informações do seu anúncio</h2>
                         )}
                         <div className="ownerInfo">
-                            {isLoadingUser ? (
+                            {isLoading ? (
                                 <>
                                     <div className="avatar skeletonLoader" style={{borderRadius: "50%", height: "100px", width: "100px"}}>
                                         <span></span>
@@ -306,7 +306,7 @@ function DetalhesAnuncio() {
                                 </>
                             )}
                         </div>
-                        {isLoadingUser ? (
+                        {isLoading ? (
                             <>
                                 <p className="HeaderInfoVendedorDetalhesP skeletonLoader" style={{borderRadius: "5px", height: "25px"}}>Cadastrado desde 00/00/0000{formatDate(adOwner.created_at)}</p>
                             </>
