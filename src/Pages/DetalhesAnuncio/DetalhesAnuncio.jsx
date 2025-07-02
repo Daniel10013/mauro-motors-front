@@ -41,7 +41,7 @@ function DetalhesAnuncio() {
             ]);
         } finally {
             setTimeout(() => {
-                setIsLoading(false);
+                // setIsLoading(false);
             }, 800);
         }
     };
@@ -255,7 +255,7 @@ function DetalhesAnuncio() {
     };
     if (isLoading) return <LoadingDetalhesAnuncio />;
     return (
-        <div>
+        <>
             <Header_Home_Login />
             <div>
                 <p className="BackToListDetalhes" onClick={back}>← Voltar</p>
@@ -287,32 +287,17 @@ function DetalhesAnuncio() {
                             <h2>Informações do seu anúncio</h2>
                         )}
                         <div className="ownerInfo">
-                            {isLoading ? (
-                                <>
-                                    <div className="avatar skeletonLoader" style={{ borderRadius: "50%", height: "100px", width: "100px" }}>
-                                        <span></span>
-                                    </div>
-                                    <p className="skeletonLoader" style={{ width: "50%", borderRadius: "5px", height: "35px" }}></p>
-                                </>
-                            ) : (
-                                <>
-                                    <div className="avatar">
-                                        <img
-                                            src={adOwner.file_name == null ? userAvatar : adOwner.file_name}
-                                            alt="User Avatar"
-                                        />{" "}
-                                    </div>
-                                    <p>{adOwner.name}</p>
-                                </>
-                            )}
-                        </div>
-                        {isLoading ? (
                             <>
-                                <p className="HeaderInfoVendedorDetalhesP skeletonLoader" style={{ borderRadius: "5px", height: "25px" }}>Cadastrado desde 00/00/0000</p>
+                                <div className="avatar">
+                                    <img
+                                        src={adOwner.file_name == null ? userAvatar : adOwner.file_name}
+                                        alt="User Avatar"
+                                    />{" "}
+                                </div>
+                                <p>{adOwner.name}</p>
                             </>
-                        ) : (<>
-                            <p className="HeaderInfoVendedorDetalhesP">Cadastrado {formatDate(adOwner.created_at)}</p>
-                        </>)}
+                        </div>
+                        <p className="HeaderInfoVendedorDetalhesP">Cadastrado {formatDate(adOwner.created_at)}</p>
                         {ownerAddress.state != null || ownerAddress.city == null ? (
                             <></>
                         ) : (
@@ -323,59 +308,32 @@ function DetalhesAnuncio() {
                     </div>
                     {adData.status === "available" ? (
                         <>
-                            {isLoading ? (
-                                <>
-                                    <div className="HeaderContactVendedorDetalhes skeletonLoader" style={{ height: "unset", width: "unset" }}>
-                                        <p>Mais informações</p>
-                                        <p className="HeaderContactVendedorDetalhesNegrito">Entre em contato</p>
-                                        <p>0000000000</p>
-                                    </div>
-                                    <div className="HeaderPriceVendedorDetalhes skeletonLoader" style={{ height: "unset", width: "unset" }}>
-                                        <p>{" "}</p>
-                                    </div>
-                                </>
-                            ) : (<>
-                                <div className="HeaderContactVendedorDetalhes">
-                                    <p>Mais informações</p>
-                                    <p className="HeaderContactVendedorDetalhesNegrito">Entre em contato</p>
-                                    <p>{adOwner.phone}</p>
-                                </div>
-                                <div className="HeaderPriceVendedorDetalhes">
-                                    <p>{formatMoney(adData.value)}</p>
-                                </div>
-                            </>)}
-                            {isLoading == false && adData.user_id !== Number(getUserIdFromToken()) ? (
+                            <div className="HeaderContactVendedorDetalhes">
+                                <p>Mais informações</p>
+                                <p className="HeaderContactVendedorDetalhesNegrito">Entre em contato</p>
+                                <p>{adOwner.phone}</p>
+                            </div>
+                            <div className="HeaderPriceVendedorDetalhes">
+                                <p>{formatMoney(adData.value)}</p>
+                            </div>
+                            {adData.user_id !== Number(getUserIdFromToken()) ? (
                                 <div className="HeaderBuyVendedorDetalhes" onClick={buyCar}>
                                     <p>Comprar</p>
                                 </div>
                             ) : (
-                                isLoading == false ? (
-                                    <div className="HeaderContactVendedorDetalhes">
-                                        <p>Visualizações do seu anúncio: </p>
-                                        <p>{adData.number_views}</p>
-                                    </div>
-                                ) : (
-                                    <div className="HeaderContactVendedorDetalhes skeletonLoader" style={{ height: "unset", width: "unset" }}>
-                                        <p>Visualizações do seu anúncio: </p>
-                                        <p>{" "}</p>
-                                    </div>
-                                )
+                                <div className="HeaderContactVendedorDetalhes">
+                                    <p>Visualizações do seu anúncio: </p>
+                                    <p>{adData.number_views}</p>
+                                </div>
                             )}
                         </>
                     ) : (
-                        isLoading ? (<>
-                            <div className="HeaderContactVendedorDetalhes skeletonLoader" style={{ height: "unset", width: "unset" }}>
-                                <p>{" "} </p>
-                                <p>{" "}</p>
+                        <>
+                            <div className="HeaderContactVendedorDetalhes">
+                                <p>Que pena! </p>
+                                <p>Esse veículo não está mais disponível</p>
                             </div>
-                        </>) : (
-                            <>
-                                <div className="HeaderContactVendedorDetalhes">
-                                    <p>Que pena! </p>
-                                    <p>Esse veículo não está mais disponível</p>
-                                </div>
-                            </>
-                        )
+                        </>
                     )}
 
                 </div>
@@ -437,7 +395,7 @@ function DetalhesAnuncio() {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 

@@ -1,4 +1,5 @@
 import "./DetalhesAnuncio.css"
+import Header_Home_Login from "../../Components/Header_Home_Login";
 
 function LoadingDetalhesAnuncio() {
     const back = () => {
@@ -6,7 +7,8 @@ function LoadingDetalhesAnuncio() {
     };
 
     return (
-        <div>
+        <>
+            <Header_Home_Login />
             <div>
                 <p className="BackToListDetalhes" onClick={back}>← Voltar</p>
             </div>
@@ -86,7 +88,7 @@ function LoadingDetalhesAnuncio() {
                     </div>
                 </div>
             </div>
-        </div >
+        </ >
     );
 }
 
