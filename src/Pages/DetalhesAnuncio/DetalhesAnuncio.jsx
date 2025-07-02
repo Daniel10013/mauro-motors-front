@@ -78,6 +78,7 @@ function DetalhesAnuncio() {
             .then((res) => {
                 if (res.data.status == "success") {
                     setAdOwner(res.data.data[0])
+                    console.log(res.data.data[0]);
                     return getUserAddress()
                 }
 

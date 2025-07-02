@@ -242,3 +242,29 @@
     }
 }
 
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeletonWrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+.skeletonLoader {
+  border-radius: 5px;
+  border: none;
+  color: transparent !important;
+  cursor: pointer;
+  background: linear-gradient(90deg, #e4e4e4c9 25%, #f1f1f1cb 50%, #e4e4e4c9 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 3s infinite;
+}
