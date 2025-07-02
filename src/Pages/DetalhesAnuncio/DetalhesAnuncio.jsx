@@ -39,6 +39,8 @@ function DetalhesAnuncio() {
                 increaseViews(),
                 getFavoritedOnLoad()
             ]);
+        } catch(err){
+            console.log(err);
         } finally {
             setTimeout(() => {
                 setIsLoading(false);
@@ -96,7 +98,9 @@ function DetalhesAnuncio() {
 
     const getUserAddress = async (userId) => {
         try {
+            console.log(userId);
             const res = await axios.get(apiUrl + "user/" + userId, { headers });
+            console.log(res);
             if (res.data.status === "success") {
                 setAdOwner(res.data.data[0]);
                 await getUserAddress();
