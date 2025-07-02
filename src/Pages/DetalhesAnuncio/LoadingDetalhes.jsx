@@ -33,7 +33,7 @@ function LoadingDetalhesAnuncio() {
                         <p className="HeaderInfoVendedorDetalhesP skeletonLoader" style={{ borderRadius: "5px", height: "25px" }}>Cadastrado desde 00/00/0000</p>
 
 
-                        <p className="HeaderInfoVendedorDetalhesLocation">{ownerAddress.estate} - {ownerAddress.city}</p>
+                        <p className="HeaderInfoVendedorDetalhesLocation">{""}</p>
                     </div>
 
                     <div className="HeaderContactVendedorDetalhes skeletonLoader" style={{ height: "unset", width: "unset" }}>
