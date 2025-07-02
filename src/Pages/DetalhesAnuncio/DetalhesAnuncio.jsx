@@ -41,7 +41,7 @@ function DetalhesAnuncio() {
             ]);
         } finally {
             setTimeout(() => {
-                // setIsLoading(false);
+                setIsLoading(false);
             }, 800);
         }
     };
@@ -185,8 +185,10 @@ function DetalhesAnuncio() {
     }
 
     const removeFavorite = () => {
+        console.log("clicou aqui");
         axios.delete(apiUrl + "wishlist/" + favoriteId, { headers })
             .then((res) => {
+                console.log(res);
                 if (res.data.status == "success") {
                     setIsFavorite(false);
                     toast.error("Anúncio removido da lista de desejos!", { autoClose: 1500 });
