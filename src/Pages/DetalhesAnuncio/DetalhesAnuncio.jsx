@@ -80,7 +80,7 @@ function DetalhesAnuncio() {
             const res = await axios.get(apiUrl + "user/" + userId, { headers });
             if (res.data.status === "success") {
                 setAdOwner(res.data.data[0]);
-                await getUserAddress();
+                await getUserAddress(userId);
             }
         } catch (err) {
             console.error(err);
