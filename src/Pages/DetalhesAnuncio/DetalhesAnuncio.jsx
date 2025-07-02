@@ -289,13 +289,10 @@ function DetalhesAnuncio() {
                         <div className="ownerInfo">
                             {isLoadingUser ? (
                                 <>
-                                    <div className="avatar skeletonLoader">
-                                        <img
-                                            src=""
-                                            alt=""
-                                        />{" "}
+                                    <div className="avatar skeletonLoader" style={{borderRadius: "50%"}}>
+                                        <span></span>
                                     </div>
-                                    <p className="skeletonLoader"></p>
+                                    <p className="skeletonLoader" style={{width: "50%", borderRadius: "5px", height: "35px"}}></p>
                                 </>
                             ) : (
                                 <>
