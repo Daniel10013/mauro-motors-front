@@ -94,7 +94,7 @@ function DetalhesAnuncio() {
         }
     }
 
-    const getUserAddress = async () => {
+    const getUserAddress = async (userId) => {
         try {
             const res = await axios.get(apiUrl + "user/" + userId, { headers });
             if (res.data.status === "success") {
