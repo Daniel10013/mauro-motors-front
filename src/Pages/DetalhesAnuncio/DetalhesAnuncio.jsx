@@ -56,62 +56,58 @@ function DetalhesAnuncio() {
         Authorization: `Bearer ${localStorage.getItem('token')}`
     };
 
-    const getAdData = () => {
-        axios.get(apiUrl + "ad-details/" + id, { headers })
-            .then((res) => {
-                if (res.data.status == "success") {
-                    setAdData(res.data.data[0]);
-                    return getUser(res.data.data[0].user_id);
-                }
-            })
-            .catch((res) => {
-                Swal.fire({
-                    "title": "Erro",
-                    "icon": "error",
-                    "text": "Erro ao carregar dados!"
-                }).then(() => {
-                    back();
-                })
+    const getAdData = async () => {
+        try {
+            const res = await axios.get(apiUrl + "ad-details/" + id, { headers });
+            if (res.data.status === "success") {
+                setAdData(res.data.data[0]);
+                await getUser(res.data.data[0].user_id);
+            }
+        } catch (err) {
+            Swal.fire({
+                title: "Erro",
+                icon: "error",
+                text: "Erro ao carregar dados!"
+            }).then(() => {
+                back();
             });
+        }
     }
 
-    const getUser = (userId) => {
-        axios.get(apiUrl + "user/" + userId, { headers })
-            .then((res) => {
-                if (res.data.status == "success") {
-                    setAdOwner(res.data.data[0])
-                    return getUserAddress()
-                }
-
-            })
-            .catch((res) => {
-                console.error(res);
-                Swal.fire({
-                    "title": "Erro",
-                    "icon": "error",
-                    "text": "Erro ao carregar dados!"
-                }).then(() => {
-                    back();
-                })
+    const getUser = async (userId) => {
+         try {
+            const res = await axios.get(apiUrl + "user/" + userId, { headers });
+            if (res.data.status === "success") {
+                setAdOwner(res.data.data[0]);
+                await getUserAddress();
+            }
+        } catch (err) {
+            Swal.fire({
+                title: "Erro",
+                icon: "error",
+                text: "Erro ao carregar dados!"
+            }).then(() => {
+                back();
             });
+        }
     }
 
-    const getUserAddress = () => {
-        axios.get(apiUrl + "get-address-by-id", { headers })
-            .then((res) => {
-                if (res.data.status == "success") {
-                    setOwnerAddress(res.data.data[0]);
-                }
-            })
-            .catch((res) => {
-                Swal.fire({
-                    "title": "Erro",
-                    "icon": "error",
-                    "text": "Erro ao carregar dados!"
-                }).then(() => {
-                    back();
-                })
+    const getUserAddress = async () => {
+        try {
+            const res = await axios.get(apiUrl + "user/" + userId, { headers });
+            if (res.data.status === "success") {
+                setAdOwner(res.data.data[0]);
+                await getUserAddress();
+            }
+        } catch (err) {
+            Swal.fire({
+                title: "Erro",
+                icon: "error",
+                text: "Erro ao carregar dados!"
+            }).then(() => {
+                back();
             });
+        }
     }
 
     const buyCar = () => {
