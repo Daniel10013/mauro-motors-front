@@ -98,8 +98,8 @@ function DetalhesAnuncio() {
 
     const getUserAddress = async (userId) => {
         try {
-            const apiUrl = apiUrl + "get-by-user-id/" + userId;
-            const res = await axios.get(apiUrl, {}, { headers });
+            const endpoint = apiUrl + "get-by-user-id/" + userId;
+            const res = await axios.get(endpoint, {}, { headers });
             if (res.data.status === "success") {
                 setOwnerAddress(res.data.data[0]);
             }
