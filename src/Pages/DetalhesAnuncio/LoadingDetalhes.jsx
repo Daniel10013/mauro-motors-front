@@ -16,13 +16,13 @@ function LoadingDetalhesAnuncio() {
                 <div></div>
                 <div className="HeaderCarroselInfoDetalhes">
                     <div className="HeaderInfoDetalhes">
-                        <h2 className="skeletonLoader" style={{ height: "unset", width: "unset" }} >{""}</h2>
+                        <h2 className="skeletonLoader" style={{ height: "40px", width: "45%" }} >{""}</h2>
                     </div>
                     <img className="skeletonLoader" src={""} style={{ borderRadius: "10px", height: "550px", marginLeft: "40px", width: "850px" }} />
                 </div>
                 <div className="HeaderLeftDetalhes">
                     <div className="HeaderInfoVendedorDetalhes">
-                        <h2 className="skeletonLoader" style={{ width: "50%", height: "unset" }}>{""}</h2>
+                        <h2 className="skeletonLoader" style={{ width: "50%", height: "unset" }}>{" "}</h2>
                         <div className="ownerInfo">
 
                             <div className="avatar skeletonLoader" style={{ borderRadius: "50%", height: "100px", width: "100px" }}>
@@ -34,8 +34,9 @@ function LoadingDetalhesAnuncio() {
 
                         <p className="HeaderInfoVendedorDetalhesP skeletonLoader" style={{ borderRadius: "5px", height: "25px" }}>Cadastrado desde 00/00/0000</p>
 
-
-                        <p className="HeaderInfoVendedorDetalhesLocation">{""}</p>
+                        <p className="HeaderInfoVendedorDetalhesLocation" style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+                            <span className="skeletonLoader" style={{height: "unset", width: "320px" }}>{" "}</span>
+                        </p>
                     </div>
 
                     <div className="HeaderContactVendedorDetalhes skeletonLoader" style={{ height: "unset", width: "unset" }}>
@@ -43,7 +44,7 @@ function LoadingDetalhesAnuncio() {
                         <p className="HeaderContactVendedorDetalhesNegrito">Entre em contato</p>
                         <p>0000000000</p>
                     </div>
-                    <div className="HeaderPriceVendedorDetalhes skeletonLoader" style={{ height: "unset", width: "unset" }}>
+                    <div className="HeaderPriceVendedorDetalhes skeletonLoader" style={{ height: "80px", width: "unset" }}>
                         <p>{" "}</p>
                     </div>
                 </div>
