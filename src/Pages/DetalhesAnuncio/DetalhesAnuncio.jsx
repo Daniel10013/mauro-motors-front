@@ -23,6 +23,7 @@ function DetalhesAnuncio() {
     const [ownerAddress, setOwnerAddress] = useState({});
     const [isFavorite, setIsFavorite] = useState(false);
     const [favoriteId, setFavoriteId] = useState(false);
+    const [isLoadingUser, setIsLoadingUser] = useState(true);
 
     const { id } = useParams();
 
@@ -286,13 +287,27 @@ function DetalhesAnuncio() {
                             <h2>Informações do seu anúncio</h2>
                         )}
                         <div className="ownerInfo">
-                            <div className="avatar">
-                                <img
-                                    src={adOwner.file_name == null ? userAvatar : adOwner.file_name}
-                                    alt="User Avatar"
-                                />{" "}
-                            </div>
-                            <p>{adOwner.name}</p>
+                            {isLoadingUser ? (
+                                <>
+                                    <div className="avatar skeletonLoader">
+                                        <img
+                                            src=""
+                                            alt=""
+                                        />{" "}
+                                    </div>
+                                    <p className="skeletonLoader"></p>
+                                </>
+                            ) : (
+                                <>
+                                    <div className="avatar">
+                                        <img
+                                            src={adOwner.file_name == null ? userAvatar : adOwner.file_name}
+                                            alt="User Avatar"
+                                        />{" "}
+                                    </div>
+                                    <p>{adOwner.name}</p>
+                                </>
+                            )}
                         </div>
                         <p className="HeaderInfoVendedorDetalhesP">Cadastrado desde {formatDate(adOwner.created_at)}</p>
                         {ownerAddress.state != null || ownerAddress.city == null ? (
