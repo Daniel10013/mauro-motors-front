@@ -79,7 +79,6 @@ function DetalhesAnuncio() {
             .then((res) => {
                 if (res.data.status == "success") {
                     setAdOwner(res.data.data[0])
-                    console.log(res.data.data[0]);
                     return getUserAddress()
                 }
 
@@ -325,12 +324,12 @@ function DetalhesAnuncio() {
                         <>
                             {isLoading ? (
                                 <>
-                                    <div className="HeaderContactVendedorDetalhes skeletonLoader" style={{height: "unset", width: "unset"}}>
+                                    <div className="HeaderContactVendedorDetalhes skeletonLoader" style={{ height: "unset", width: "unset" }}>
                                         <p>Mais informações</p>
                                         <p className="HeaderContactVendedorDetalhesNegrito">Entre em contato</p>
                                         <p>0000000000</p>
                                     </div>
-                                    <div className="HeaderPriceVendedorDetalhes skeletonLoader" style={{height: "unset", width: "unset"}}>
+                                    <div className="HeaderPriceVendedorDetalhes skeletonLoader" style={{ height: "unset", width: "unset" }}>
                                         <p>{" "}</p>
                                     </div>
                                 </>
@@ -344,27 +343,38 @@ function DetalhesAnuncio() {
                                     <p>{formatMoney(adData.value)}</p>
                                 </div>
                             </>)}
-                            <div className="HeaderPriceVendedorDetalhes">
-                                <p>{formatMoney(adData.value)}</p>
-                            </div>
-                            {adData.user_id !== Number(getUserIdFromToken()) ? (
+                            {isLoading == false && adData.user_id !== Number(getUserIdFromToken()) ? (
                                 <div className="HeaderBuyVendedorDetalhes" onClick={buyCar}>
                                     <p>Comprar</p>
                                 </div>
                             ) : (
-                                <div className="HeaderContactVendedorDetalhes">
-                                    <p>Visualizações do seu anúncio: </p>
-                                    <p>{adData.number_views}</p>
-                                </div>
+                                isLoading == false ? (
+                                    <div className="HeaderContactVendedorDetalhes">
+                                        <p>Visualizações do seu anúncio: </p>
+                                        <p>{adData.number_views}</p>
+                                    </div>
+                                ) : (
+                                    <div className="HeaderContactVendedorDetalhes skeletonLoader" style={{ height: "unset", width: "unset" }}>
+                                        <p>Visualizações do seu anúncio: </p>
+                                        <p>{" "}</p>
+                                    </div>
+                                )
                             )}
                         </>
                     ) : (
-                        <>
-                            <div className="HeaderContactVendedorDetalhes">
+                        isLoading ? (<>
+                            <div className="HeaderContactVendedorDetalhes skeletonLoader" style={{ height: "unset", width: "unset" }}>
                                 <p>Que pena! </p>
                                 <p>Esse veículo não está mais disponível</p>
                             </div>
-                        </>
+                        </>) : (
+                            <>
+                                <div className="HeaderContactVendedorDetalhes">
+                                    <p>Que pena! </p>
+                                    <p>Esse veículo não está mais disponível</p>
+                                </div>
+                            </>
+                        )
                     )}
 
                 </div>
