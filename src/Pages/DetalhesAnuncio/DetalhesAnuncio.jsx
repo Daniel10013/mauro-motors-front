@@ -289,10 +289,10 @@ function DetalhesAnuncio() {
                         <div className="ownerInfo">
                             {isLoading ? (
                                 <>
-                                    <div className="avatar skeletonLoader" style={{borderRadius: "50%", height: "100px", width: "100px"}}>
+                                    <div className="avatar skeletonLoader" style={{ borderRadius: "50%", height: "100px", width: "100px" }}>
                                         <span></span>
                                     </div>
-                                    <p className="skeletonLoader" style={{width: "50%", borderRadius: "5px", height: "35px"}}></p>
+                                    <p className="skeletonLoader" style={{ width: "50%", borderRadius: "5px", height: "35px" }}></p>
                                 </>
                             ) : (
                                 <>
@@ -308,11 +308,11 @@ function DetalhesAnuncio() {
                         </div>
                         {isLoading ? (
                             <>
-                                <p className="HeaderInfoVendedorDetalhesP skeletonLoader" style={{borderRadius: "5px", height: "25px"}}>Cadastrado desde 00/00/0000{formatDate(adOwner.created_at)}</p>
+                                <p className="HeaderInfoVendedorDetalhesP skeletonLoader" style={{ borderRadius: "5px", height: "25px" }}>Cadastrado desde 00/00/0000{formatDate(adOwner.created_at)}</p>
                             </>
                         ) : (<>
-                                <p className="HeaderInfoVendedorDetalhesP">Cadastrado {formatDate(adOwner.created_at)}</p>
-                            </>)}
+                            <p className="HeaderInfoVendedorDetalhesP">Cadastrado {formatDate(adOwner.created_at)}</p>
+                        </>)}
                         {ownerAddress.state != null || ownerAddress.city == null ? (
                             <></>
                         ) : (
@@ -323,11 +323,27 @@ function DetalhesAnuncio() {
                     </div>
                     {adData.status === "available" ? (
                         <>
-                            <div className="HeaderContactVendedorDetalhes">
-                                <p>Mais informações</p>
-                                <p className="HeaderContactVendedorDetalhesNegrito">Entre em contato</p>
-                                <p>{adOwner.phone}</p>
-                            </div>
+                            {isLoading ? (
+                                <>
+                                    <div className="HeaderContactVendedorDetalhes skeletonLoader" style={{height: "unset", width: "unset"}}>
+                                        <p>Mais informações</p>
+                                        <p className="HeaderContactVendedorDetalhesNegrito">Entre em contato</p>
+                                        <p>0000000000</p>
+                                    </div>
+                                    <div className="HeaderPriceVendedorDetalhes skeletonLoader" style={{height: "unset", width: "unset"}}>
+                                        <p>{" "}</p>
+                                    </div>
+                                </>
+                            ) : (<>
+                                <div className="HeaderContactVendedorDetalhes">
+                                    <p>Mais informações</p>
+                                    <p className="HeaderContactVendedorDetalhesNegrito">Entre em contato</p>
+                                    <p>{adOwner.phone}</p>
+                                </div>
+                                <div className="HeaderPriceVendedorDetalhes">
+                                    <p>{formatMoney(adData.value)}</p>
+                                </div>
+                            </>)}
                             <div className="HeaderPriceVendedorDetalhes">
                                 <p>{formatMoney(adData.value)}</p>
                             </div>
