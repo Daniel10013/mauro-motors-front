@@ -306,7 +306,13 @@ function DetalhesAnuncio() {
                                 </>
                             )}
                         </div>
-                        <p className="HeaderInfoVendedorDetalhesP">Cadastrado desde {formatDate(adOwner.created_at)}</p>
+                        {isLoadingUser ? (
+                            <>
+                                <p className="HeaderInfoVendedorDetalhesP skeletonLoader" style={{borderRadius: "5px", height: "25px"}}>Cadastrado desde 00/00/0000{formatDate(adOwner.created_at)}</p>
+                            </>
+                        ) : (<>
+                                <p className="HeaderInfoVendedorDetalhesP">Cadastrado {formatDate(adOwner.created_at)}</p>
+                            </>)}
                         {ownerAddress.state != null || ownerAddress.city == null ? (
                             <></>
                         ) : (
