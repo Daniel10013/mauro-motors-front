@@ -9,6 +9,7 @@ import "./DetalhesAnuncio.css"
 import Swal from "sweetalert2";
 import axios from "axios";
 import userAvatar from "../Perfil/images/user-avatar.png";
+import LoadingDetalhesAnuncio from "./LoadingDetalhes";
 
 
 const apiUrl = import.meta.env.VITE_API_URL;
@@ -252,7 +253,7 @@ function DetalhesAnuncio() {
     const back = () => {
         history.back();
     };
-    // if (loading) return <Loader />;
+    if (isLoading) return <LoadingDetalhesAnuncio />;
     return (
         <div>
             <Header_Home_Login />
@@ -307,7 +308,7 @@ function DetalhesAnuncio() {
                         </div>
                         {isLoading ? (
                             <>
-                                <p className="HeaderInfoVendedorDetalhesP skeletonLoader" style={{ borderRadius: "5px", height: "25px" }}>Cadastrado desde 00/00/0000{formatDate(adOwner.created_at)}</p>
+                                <p className="HeaderInfoVendedorDetalhesP skeletonLoader" style={{ borderRadius: "5px", height: "25px" }}>Cadastrado desde 00/00/0000</p>
                             </>
                         ) : (<>
                             <p className="HeaderInfoVendedorDetalhesP">Cadastrado {formatDate(adOwner.created_at)}</p>
@@ -364,8 +365,8 @@ function DetalhesAnuncio() {
                     ) : (
                         isLoading ? (<>
                             <div className="HeaderContactVendedorDetalhes skeletonLoader" style={{ height: "unset", width: "unset" }}>
-                                <p>Que pena! </p>
-                                <p>Esse veículo não está mais disponível</p>
+                                <p>{" "} </p>
+                                <p>{" "}</p>
                             </div>
                         </>) : (
                             <>
