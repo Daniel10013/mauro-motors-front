@@ -68,7 +68,7 @@ function DetalhesAnuncio() {
             Swal.fire({
                 title: "Erro",
                 icon: "error",
-                text: "Erro ao carregar dados!"
+                text: "Erro ao carregar dados! 1"
             }).then(() => {
                 back();
             });
@@ -87,7 +87,7 @@ function DetalhesAnuncio() {
             Swal.fire({
                 title: "Erro",
                 icon: "error",
-                text: "Erro ao carregar dados!"
+                text: "Erro ao carregar dados! 2"
             }).then(() => {
                 back();
             });
@@ -106,7 +106,7 @@ function DetalhesAnuncio() {
             Swal.fire({
                 title: "Erro",
                 icon: "error",
-                text: "Erro ao carregar dados!"
+                text: "Erro ao carregar dados! 3"
             }).then(() => {
                 back();
             });
