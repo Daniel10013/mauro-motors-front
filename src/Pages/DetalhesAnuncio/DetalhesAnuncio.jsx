@@ -63,7 +63,7 @@ function DetalhesAnuncio() {
             const res = await axios.get(apiUrl + "ad-details/" + id, { headers });
             if (res.data.status === "success") {
                 setAdData(res.data.data[0]);
-                await getUser(res.data.data[0].user_id);
+                return await getUser(res.data.data[0].user_id);
             }
         } catch (err) {
             console.error(err);
@@ -82,7 +82,7 @@ function DetalhesAnuncio() {
             const res = await axios.get(apiUrl + "user/" + userId, { headers });
             if (res.data.status === "success") {
                 setAdOwner(res.data.data[0]);
-                await getUserAddress(userId);
+                return await getUserAddress(userId);
             }
         } catch (err) {
             console.error(err);
