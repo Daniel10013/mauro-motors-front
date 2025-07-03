@@ -103,13 +103,13 @@ function DetalhesAnuncio() {
             }
         } catch (err) {
             console.error(err);
-            Swal.fire({
-                title: "Erro",
-                icon: "error",
-                text: "Erro ao carregar dados! 3"
-            }).then(() => {
-                back();
-            });
+            // Swal.fire({
+            //     title: "Erro",
+            //     icon: "error",
+            //     text: "Erro ao carregar dados! 3"
+            // }).then(() => {
+            //     back();
+            // });
         }
     }
 
