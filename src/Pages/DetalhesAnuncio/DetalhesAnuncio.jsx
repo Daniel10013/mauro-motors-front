@@ -39,8 +39,6 @@ function DetalhesAnuncio() {
                 increaseViews(),
                 getFavoritedOnLoad()
             ]);
-        } catch(err){
-            console.log(err);
         } finally {
             setTimeout(() => {
                 setIsLoading(false);
@@ -78,7 +76,7 @@ function DetalhesAnuncio() {
     }
 
     const getUser = async (userId) => {
-         try {
+        try {
             const res = await axios.get(apiUrl + "user/" + userId, { headers });
             if (res.data.status === "success") {
                 setAdOwner(res.data.data[0]);
