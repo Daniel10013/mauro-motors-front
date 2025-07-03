@@ -52,13 +52,13 @@ function DetalhesAnuncio() {
         return payload.sub || null;
     }
 
-    const headers = {
-        Authorization: `Bearer ${localStorage.getItem('token')}`
-    };
+    const getAuthHeaders = () => ({
+    Authorization: `Bearer ${localStorage.getItem('token')}`
+  });
 
     const getAdData = async () => {
         try {
-            const res = await axios.get(apiUrl + "ad-details/" + id, { headers });
+            const res = await axios.get(apiUrl + "ad-details/" + id, { headers: getAuthHeaders() });
             if (res.data.status === "success") {
                 setAdData(res.data.data[0]);
                 return await getUser(res.data.data[0].user_id);
@@ -77,7 +77,7 @@ function DetalhesAnuncio() {
 
     const getUser = async (userId) => {
         try {
-            const res = await axios.get(apiUrl + "user/" + userId, { headers });
+            const res = await axios.get(apiUrl + "user/" + userId, { headers: getAuthHeaders() });
             if (res.data.status === "success") {
                 setAdOwner(res.data.data[0]);
                 return await getUserAddress(userId);
@@ -97,7 +97,7 @@ function DetalhesAnuncio() {
     const getUserAddress = async (userId) => {
         try {
             const endpoint = apiUrl + "get-by-user-id/" + userId;
-            const res = await axios.get(endpoint, {}, { headers });
+            const res = await axios.get(endpoint, {}, { headers: getAuthHeaders() });
             if (res.data.status === "success") {
                 setOwnerAddress(res.data.data[0]);
             }
@@ -124,7 +124,7 @@ function DetalhesAnuncio() {
             "confirmButtonColor": "green"
         }).then((res) => {
             if (res.isConfirmed) {
-                axios.post(apiUrl + "sale", { "ad_id": id }, { headers })
+                axios.post(apiUrl + "sale", { "ad_id": id }, { headers: getAuthHeaders() })
                     .then((res) => {
                         if (res.data.status == "success") {
                             Swal.fire({
@@ -150,7 +150,7 @@ function DetalhesAnuncio() {
     }
 
     const getFavoritedOnLoad = () => {
-        axios.get(apiUrl + "wishlist", { headers })
+        axios.get(apiUrl + "wishlist", { headers: getAuthHeaders() })
             .then((res) => {
                 if (res.data.status == "success") {
                     const favoriteAd = res.data.data.find(item => item.ad_id == id)
@@ -168,7 +168,7 @@ function DetalhesAnuncio() {
     }
 
     const favoriteAd = () => {
-        axios.post(apiUrl + "wishlist", { "ad_id": id }, { headers })
+        axios.post(apiUrl + "wishlist", { "ad_id": id }, { headers: getAuthHeaders() })
             .then((res) => {
                 if (res.data.status == "success") {
                     setIsFavorite(true);
@@ -185,7 +185,7 @@ function DetalhesAnuncio() {
 
     const removeFavorite = () => {
         console.log("clicou aqui");
-        axios.delete(apiUrl + "wishlist/" + favoriteId, { headers })
+        axios.delete(apiUrl + "wishlist/" + favoriteId, { headers: getAuthHeaders() })
             .then((res) => {
                 console.log(res);
                 if (res.data.status == "success") {
@@ -248,7 +248,7 @@ function DetalhesAnuncio() {
     }
 
     const increaseViews = () => {
-        axios.put(apiUrl + "views", { ad_id: id }, { headers })
+        axios.put(apiUrl + "views", { ad_id: id }, { headers: getAuthHeaders() })
     }
 
     const back = () => {
